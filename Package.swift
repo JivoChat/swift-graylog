@@ -11,9 +11,13 @@ let package = Package(
             targets: ["SwiftGraylog"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/Quick/Nimble.git", exact: "13.0.0"),
+    ],
     targets: [
         .target(
             name: "SwiftGraylog",
+            dependencies: ["Nimble"],
             path: "."
         )
     ]
